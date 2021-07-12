@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>SHArdow's Website</title>
+
+    </head>
+
+
+
+    <style type="text/css">
+
+        .defaultFont
+        {
+            font-family: Bahnschrift, Segoe UI, Gill Sans, Helvetica, Arial, sans-serif;
+            color: #FFFFFFE0;
+        }
+
+        .monospaceFont
+        {
+            font-family: Jetbrains Mono NL, Lucida Console, Consolas, monospace;
+            color: #FFFFFFE0;
+        }
+
+        #title
+        {
+            font-size: 64px;
+        }
+
+
+        #subtitle
+        {
+            font-size: 32px;
+            font-style: italic;
+        }
+
+        #tokenInputLabel
+        {
+            font-size: 24px;
+        }
+
+        #tokenInput
+        {
+            background-color: transparent;
+            border-color: #3c8500;
+        }
+
+    </style>
+
+
+
+
+
+    <body style="background: linear-gradient(160deg, #0a4881, #3c8500); width: 100vw; height: 100vh;">
+
+        <h1 class="defaultFont" id="title">SHArdow's badly made home page...</h1>
+        <p class="defaultFont" id="subtitle">there's nothing to see here (yet)!</p>
+
+        <hr>
+
+        <label class="defaultFont" id="tokenInputLabel" for="tokenInput">Enter your token: </label>
+        <input class="monospaceFont" id="tokenInput" type="text"/>
+
+        <br>
+        <br>
+
+        <button id="tokenSubmit">Submit</button>
+        <p class="defaultFont" id="tokenInstructions"></p>
+
+        <script src="forwarder.js"></script>
+
+    </body>
+
+</html>
