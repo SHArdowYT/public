@@ -21,7 +21,9 @@ async function forwarder()
 
                     if ((responseData.substring(0, 14)) == "<!--SHArdow-->")
                     {
-                        ((document.getElementsByTagName("html"))[0]).innerHTML = responseData;
+                        document.open();
+                        document.write(responseData);
+                        document.close();
                     }
                     else if ((responseData.substring(0, 14)) != "<!--SHArdow-->")
                     {
