@@ -1,3 +1,5 @@
+<!--SHArdow-->
+
 <!doctype html>
 <html lang="en">
 
@@ -45,16 +47,32 @@
         #tokenInput
         {
             background-color: transparent;
-            border-color: #3c8500;
+            border-color: #408000;
+            width: 320px;
+            height: 24px;
         }
 
+        #tokenSubmit
+        {
+            background-color: #FFFFFFE0;
+            border-color: transparent;
+            font-size: 24px;
+            color: #000000E0;
+            width: 160px;
+            height: 40px;
+        }
+
+        #tokenInstructions
+        {
+            color: #FFC000;
+        }
     </style>
 
 
 
 
 
-    <body style="background: linear-gradient(160deg, #0a4881, #3c8500); width: 100vw; height: 100vh;">
+    <body style="background: linear-gradient(160deg, #004080, #408000); width: 100vw; height: 100vh;">
 
         <h1 class="defaultFont" id="title">SHArdow's badly made home page...</h1>
         <p class="defaultFont" id="subtitle">there's nothing to see here (unless you have a token)!</p>
@@ -67,7 +85,7 @@
         <br>
         <br>
 
-        <button id="tokenSubmit">Submit</button>
+        <button class="defaultFont" id="tokenSubmit">Submit</button>
         <p class="defaultFont" id="tokenInstructions"></p>
 
         <script src="forwarder.js"></script>
