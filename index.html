@@ -7,66 +7,10 @@
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
-        <title>SHArdow's Website</title>
+        <title>SHArdow's Home Page</title>
+        <link rel="stylesheet" href="forwarder.css"><link>
 
     </head>
-
-
-
-    <style type="text/css">
-
-        .defaultFont
-        {
-            font-family: Bahnschrift, Segoe UI, Gill Sans, Helvetica, Arial, sans-serif;
-            color: #FFFFFFE0;
-        }
-
-        .monospaceFont
-        {
-            font-family: Jetbrains Mono NL, Lucida Console, Consolas, monospace;
-            color: #FFFFFFE0;
-        }
-
-        #title
-        {
-            font-size: 64px;
-        }
-
-
-        #subtitle
-        {
-            font-size: 32px;
-            font-style: italic;
-        }
-
-        #tokenInputLabel
-        {
-            font-size: 24px;
-        }
-
-        #tokenInput
-        {
-            background-color: transparent;
-            border-color: #408000;
-            width: 320px;
-            height: 24px;
-        }
-
-        #tokenSubmit
-        {
-            background-color: #FFFFFFE0;
-            border-color: transparent;
-            font-size: 24px;
-            color: #000000E0;
-            width: 160px;
-            height: 40px;
-        }
-
-        #tokenInstructions
-        {
-            color: #FFC000;
-        }
-    </style>
 
 
 
@@ -87,6 +31,31 @@
 
         <button class="defaultFont" id="tokenSubmit">Submit</button>
         <p class="defaultFont" id="tokenInstructions"></p>
+
+        <br>
+        <br>
+
+        <table id="table">
+
+            <tr>
+                <th class="defaultFont" id="tableTitle">Recent</th>
+            </tr>
+
+            <tr>
+                <td class="defaultFont" id="tableRow0"></td>
+            </tr>
+            <tr>
+                <td class="defaultFont" id="tableRow1"></td>
+            </tr>
+            <tr>
+                <td class="defaultFont" id="tableRow2"></td>
+            </tr>
+            <tr>
+                <td class="defaultFont" id="tableRow3"></td>
+            </tr>
+
+        </table>
+
 
         <script src="forwarder.js"></script>
 

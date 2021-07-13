@@ -1,0 +1,83 @@
+
+        .defaultFont
+        {
+            font-family: Bahnschrift, Segoe UI, Gill Sans, Helvetica, Arial, sans-serif;
+            color: #FFFFFFE0;
+        }
+
+        .monospaceFont
+        {
+            font-family: Jetbrains Mono NL, Lucida Console, Consolas, monospace;
+            color: #FFFFFFE0;
+        }
+
+        #title
+        {
+            font-size: 64px;
+        }
+
+
+        #subtitle
+        {
+            font-size: 32px;
+            font-style: italic;
+        }
+
+        #tokenInputLabel
+        {
+            font-size: 24px;
+        }
+
+        #tokenInput
+        {
+            background-color: transparent;
+            border-color: #408000;
+            width: 320px;
+            height: 24px;
+        }
+
+        #tokenSubmit
+        {
+            background-color: #FFFFFFE0;
+            border-color: transparent;
+            font-size: 24px;
+            color: #000000E0;
+            width: 160px;
+            height: 40px;
+        }
+
+        #tokenInstructions
+        {
+            color: #FFC000;
+        }
+
+        #tableTitle
+        {
+            font-size: 32px;
+        }
+
+
+
+        #tableRow0
+        {
+            color: #FFC000E0;
+            cursor: pointer;
+        }
+
+        #tableRow1
+        {
+            color: #FFC000E0;
+            cursor: pointer;
+        }
+
+        #tableRow2
+        {
+            color: #FFC000E0;
+            cursor: pointer;
+        }
+
+        #tableRow3
+        {
+            color: #FFC000E0;
+            cursor: pointer;
+        }
