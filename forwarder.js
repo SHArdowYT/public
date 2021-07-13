@@ -11,7 +11,7 @@ async function forwarder()
 
             async function()
             {
-                var token = (document.getElementById("tokenInput").value);
+                var token = ((document.getElementById("tokenInput").value).trim());
                 var file = ("https://gist.githubusercontent.com/SHArdowYT" + "/" + token + "/" + "raw");
 
                 var request = await fetch(file);
