@@ -1,3 +1,5 @@
+//SHArdow
+
 async function forwarder()
 {
 
@@ -27,7 +29,7 @@ async function forwarder()
                     }
                     else if ((responseData.substring(0, 14)) != "<!--SHArdow-->")
                     {
-                        document.getElementById("tokenInstructions").innerHTML = "invalid token!"
+                        document.getElementById("tokenInstructions").innerHTML = "⚠ invalid token!"
                     }
                     else
                     {
@@ -37,7 +39,7 @@ async function forwarder()
                 }
                 else if (responseStatus != 200)
                 {
-                    document.getElementById("tokenInstructions").innerHTML = "invalid token!"
+                    document.getElementById("tokenInstructions").innerHTML = "⚠ invalid token!"
                 }
                 else
                 {
