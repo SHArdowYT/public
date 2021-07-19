@@ -56,27 +56,7 @@
             font-size: 32px;
         }
 
-
-
-        #tableRow0
-        {
-            color: #FFC000E0;
-            cursor: pointer;
-        }
-
-        #tableRow1
-        {
-            color: #FFC000E0;
-            cursor: pointer;
-        }
-
-        #tableRow2
-        {
-            color: #FFC000E0;
-            cursor: pointer;
-        }
-
-        #tableRow3
+        .tableRow
         {
             color: #FFC000E0;
             cursor: pointer;
