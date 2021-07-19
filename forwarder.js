@@ -17,9 +17,23 @@ async function forwarder()
         recent = (JSON.parse(localStorage.getItem("recent")));
 
         var repeats = 0;
-        while ((repeats < ((recent["Recent"]).length)) && (repeats < 4))
+        while ((repeats < ((recent["Recent"]).length)) && (repeats < 12))
         {
             document.getElementById("tableRow" + (String(repeats))).innerHTML = (recent["Recent"][repeats]);
+            document.getElementById("tableRow" + (String(repeats))).addEventListener
+            (
+
+                "mousedown",
+                (
+
+                    async function()
+                    {
+                        document.getElementById("tokenInput").value = (recent["Recent"][(parseInt((this.id).substr(8, )))]);
+                    }
+
+                )
+
+            )
             repeats = repeats + 1;
         }
 
@@ -107,6 +121,7 @@ async function forwarder()
                 var request = await fetch(file);
                 var responseStatus = await (request.status);
                 var responseData = await (request.text());
+                console.log(file)
 
                 if (responseStatus == 200)
                 {
@@ -123,6 +138,7 @@ async function forwarder()
                     else if ((responseData.substring(0, 14)) != "<!--SHArdow-->")
                     {
                         document.getElementById("tokenInstructions").innerHTML = "⚠ invalid token!"
+                        console.log(responseData)
                     }
                     else
                     {
