@@ -37,71 +37,16 @@ async function forwarder()
             repeats = repeats + 1;
         }
 
+        document.getElementById("tokenInput").value = (recent["Recent"][0]);
+
+    }
+    else
+    {
+        throw "Impossible Condition";
     }
 
 
 
-
-
-    document.getElementById("tableRow0").addEventListener
-    (
-
-        "mousedown",
-        (
-
-            async function()
-            {
-                document.getElementById("tokenInput").value = (recent["Recent"][0]);
-            }
-
-        )
-
-    );
-
-    document.getElementById("tableRow1").addEventListener
-    (
-
-        "mousedown",
-        (
-
-            async function()
-            {
-                document.getElementById("tokenInput").value = (recent["Recent"][1]);
-            }
-
-        )
-
-    );
-
-    document.getElementById("tableRow2").addEventListener
-    (
-
-        "mousedown",
-        (
-
-            async function()
-            {
-                document.getElementById("tokenInput").value = (recent["Recent"][2]);
-            }
-
-        )
-
-    );
-
-    document.getElementById("tableRow3").addEventListener
-    (
-
-        "mousedown",
-        (
-
-            async function()
-            {
-                document.getElementById("tokenInput").value = (recent["Recent"][3]);
-            }
-
-        )
-
-    );
 
 
 
