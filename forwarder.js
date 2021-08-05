@@ -3,6 +3,17 @@
 async function forwarder()
 {
 
+
+    try
+    {
+        document.body.style.zoom = ((String((1 / (window.devicePixelRatio)) * 100)) + "%")
+    }
+    catch (error)
+    {
+    }
+
+
+
     var recent = {}
 
 
