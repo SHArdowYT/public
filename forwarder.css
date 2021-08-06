@@ -1,70 +1,82 @@
 
-        .defaultFont
-        {
-            font-family: Bahnschrift, Segoe UI, Gill Sans, Helvetica, Arial, sans-serif;
-            color: #FFFFFFE0;
-        }
+    .defaultFont
+    {
+        font-family: Bahnschrift, Segoe UI, Gill Sans, Helvetica, Arial, sans-serif;
+        color: #FFFFFFE0;
+    }
 
-        .monospaceFont
-        {
-            font-family: Jetbrains Mono NL, Lucida Console, Consolas, monospace;
-            color: #FFFFFFE0;
-        }
+    .monospaceFont
+    {
+        font-family: Jetbrains Mono NL, Lucida Console, Consolas, monospace;
+        color: #FFFFFFE0;
+    }
 
-        #title
-        {
-            font-size: 64px;
-        }
+    #title
+    {
+        font-size: 64px;
+    }
 
 
-        #subtitle
-        {
-            font-size: 32px;
-            font-style: italic;
-        }
+    #subtitle
+    {
+        font-size: 32px;
+        font-style: italic;
+    }
 
-        #tokenInputLabel
-        {
-            font-size: 24px;
-        }
+    #horizontalRule
+    {
+        width: 99%;
+        height: 24px;
+        border-width: 4px;
+        border-top-color: #FFFFFF80;
+        border-top-style: dotted;
+        border-bottom-style: none;
+        border-left-style: none;
+        border-right-style: none;
+    }
 
-        #tokenInput
-        {
-            background-color: transparent;
-            border-color: #408000;
-            width: 320px;
-            height: 24px;
-            border: none;
-            border-color: transparent;
-            outline: none;
-        }
+    #tokenInputLabel
+    {
+        font-size: 24px;
+    }
 
-        #tokenSubmit
-        {
-            background-color: #FFFFFFE0;
-            border-color: transparent;
-            font-size: 24px;
-            color: #000000E0;
-            width: 160px;
-            height: 40px;
-            border: none;
-            border-radius: 20px;
-            border-color: transparent;
-            outline: none;
-        }
+    #tokenInput
+    {
+        background-color: transparent;
+        border-color: #408000;
+        width: 320px;
+        height: 24px;
+        border: none;
+        border-color: transparent;
+        outline: none;
+    }
 
-        #tokenInstructions
-        {
-            color: #FFC000;
-        }
+    #tokenSubmit
+    {
+        background-color: #FFFFFFE0;
+        border-color: transparent;
+        font-size: 24px;
+        color: #000000E0;
+        width: 160px;
+        height: 40px;
+        border: none;
+        border-radius: 20px;
+        border-color: transparent;
+        outline: none;
+    }
 
-        #tableTitle
-        {
-            font-size: 32px;
-        }
+    #tokenInstructions
+    {
+        color: #FFC000;
+    }
 
-        .tableRow
-        {
-            color: #FFC000E0;
-            cursor: pointer;
-        }
+    #tableTitle
+    {
+        font-size: 32px;
+    }
+
+    .tableRow
+    {
+        color: #FFC000E0;
+        cursor: pointer;
+    }
