@@ -11,12 +11,6 @@
         color: #FFFFFFE0;
     }
 
-    .tableRow
-    {
-        color: #FFC000E0;
-        cursor: pointer;
-    }
-
 
 
     #title
@@ -79,6 +73,12 @@
     #tokenInstructions
     {
         color: #FFC000;
+    }
+
+    #table > *
+    {
+        color: #FFC000E0;
+        cursor: pointer;
     }
 
     #tableTitle
