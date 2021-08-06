@@ -51,14 +51,15 @@
     #tokenInput
     {
         position: relative;
-        width: 320px;
-        height: 24px;
+        width: 384px;
+        height: 32px;
         background-color: #FFFFFF80;
         color: #000000;
+        font-size: 20px;
         outline: none;
         border: none;
+        border-radius: 16px;
         border-color: transparent;
-        outline: none;
     }
 
     #tokenSubmit
