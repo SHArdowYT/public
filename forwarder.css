@@ -11,6 +11,14 @@
         color: #FFFFFFE0;
     }
 
+    .tableRow
+    {
+        color: #FFC000E0;
+        cursor: pointer;
+    }
+
+
+
     #title
     {
         font-size: 64px;
@@ -42,10 +50,12 @@
 
     #tokenInput
     {
-        background-color: transparent;
-        border-color: #408000;
+        position: relative;
         width: 320px;
         height: 24px;
+        background-color: #FFFFFF80;
+        color: #000000;
+        outline: none;
         border: none;
         border-color: transparent;
         outline: none;
@@ -73,10 +83,4 @@
     #tableTitle
     {
         font-size: 32px;
-    }
-
-    .tableRow
-    {
-        color: #FFC000E0;
-        cursor: pointer;
     }
