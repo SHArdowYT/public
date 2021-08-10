@@ -72,39 +72,58 @@ async function forwarder()
             async function()
             {
                 var token = ((document.getElementById("tokenInput").value).trim());
-                var file = ("https://gist.githubusercontent.com/SHArdowYT" + "/" + token + "/" + "raw");
 
-                var request = await fetch(file);
-                var responseStatus = await (request.status);
-                var responseData = await (request.text());
-                console.log(file)
 
-                if (responseStatus == 200)
+                if (token == "reset")
+                {
+                    localstorage.clear();
+                }
+                else if (token != "reset")
                 {
 
-                    if ((responseData.substring(0, 14)) == "<!--SHArdow-->")
+
+
+                    var file = ("https://gist.githubusercontent.com/SHArdowYT" + "/" + token + "/" + "raw");
+
+                    var request = await fetch(file);
+                    var responseStatus = await (request.status);
+                    var responseData = await (request.text());
+                    console.log(file)
+
+                    if (responseStatus == 200)
                     {
-                        console.log(recent);
-                        (recent["Recent"]).unshift(token);
-                        localStorage.setItem("recent", (JSON.stringify(recent)));
-                        document.open();
-                        document.write(responseData);
-                        document.close();
+
+                        if ((responseData.substring(0, 14)) == "<!--SHArdow-->")
+                        {
+                            console.log(recent);
+                            (recent["Recent"]).unshift(token);
+                            localStorage.setItem("recent", (JSON.stringify(recent)));
+                            document.open();
+                            document.write(responseData);
+                            document.close();
+                        }
+                        else if ((responseData.substring(0, 14)) != "<!--SHArdow-->")
+                        {
+                            document.getElementById("tokenInstructions").innerHTML = "⚠ invalid token!"
+                            console.log(responseData)
+                        }
+                        else
+                        {
+                            throw "Impossible Condition";
+                        }
+
                     }
-                    else if ((responseData.substring(0, 14)) != "<!--SHArdow-->")
+                    else if (responseStatus != 200)
                     {
                         document.getElementById("tokenInstructions").innerHTML = "⚠ invalid token!"
-                        console.log(responseData)
                     }
                     else
                     {
                         throw "Impossible Condition";
                     }
 
-                }
-                else if (responseStatus != 200)
-                {
-                    document.getElementById("tokenInstructions").innerHTML = "⚠ invalid token!"
+
+
                 }
                 else
                 {
