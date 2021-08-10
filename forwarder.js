@@ -76,7 +76,8 @@ async function forwarder()
 
                 if (token == "reset")
                 {
-                    localstorage.clear();
+                    localStorage.clear();
+                    location.reload()
                 }
                 else if (token != "reset")
                 {
