@@ -4,6 +4,84 @@ async function forwarder()
 {
 
 
+
+
+
+    async function readToken()
+    {
+        var token = ((document.getElementById("tokenInput").value).trim());
+
+
+        if (token == "reset")
+        {
+            localStorage.clear();
+            location.reload()
+        }
+        else if (token != "reset")
+        {
+
+
+
+            var file = ("https://gist.githubusercontent.com/SHArdowYT" + "/" + token + "/" + "raw");
+
+            var request = await fetch(file);
+            var responseStatus = await (request.status);
+            var responseData = await (request.text());
+            console.log(file)
+
+            if (responseStatus == 200)
+            {
+
+                if ((responseData.substring(0, 14)) == "<!--SHArdow-->")
+                {
+                    console.log(recent);
+                    (recent["Recent"]).unshift(token);
+                    localStorage.setItem("recent", (JSON.stringify(recent)));
+                    document.open();
+                    document.write(responseData);
+                    document.close();
+                }
+                else if ((responseData.substring(0, 14)) != "<!--SHArdow-->")
+                {
+                    document.getElementById("tokenInstructions").innerHTML = "⚠ invalid token!"
+                    console.log(responseData)
+                }
+                else
+                {
+                    throw "Impossible Condition";
+                }
+
+            }
+            else if (responseStatus != 200)
+            {
+                document.getElementById("tokenInstructions").innerHTML = "⚠ invalid token!"
+            }
+            else
+            {
+                throw "Impossible Condition";
+            }
+
+
+
+
+        }
+
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
     try
     {
         document.body.style.zoom = ((String((1 / (window.devicePixelRatio)) * 100)) + "%")
@@ -57,89 +135,31 @@ async function forwarder()
     }
 
 
+    var urlParams = new URLSearchParams((window.location).search)
+    token = urlParams.get("token")
 
 
 
+    if (token == null)
+    {
+    }
+    else if (token != null)
+    {
+        document.getElementById("tokenInput").value = token;
+        readToken();
+    }
+    else
+    {
+        throw "Impossible Condition";
+    }
 
 
 
-    document.getElementById("tokenSubmit").addEventListener
-    (
+    document.getElementById("tokenSubmit").addEventListener("mousedown", readToken);
 
-        "mousedown",
-        (
-
-            async function()
-            {
-                var token = ((document.getElementById("tokenInput").value).trim());
-
-
-                if (token == "reset")
-                {
-                    localStorage.clear();
-                    location.reload()
-                }
-                else if (token != "reset")
-                {
-
-
-
-                    var file = ("https://gist.githubusercontent.com/SHArdowYT" + "/" + token + "/" + "raw");
-
-                    var request = await fetch(file);
-                    var responseStatus = await (request.status);
-                    var responseData = await (request.text());
-                    console.log(file)
-
-                    if (responseStatus == 200)
-                    {
-
-                        if ((responseData.substring(0, 14)) == "<!--SHArdow-->")
-                        {
-                            console.log(recent);
-                            (recent["Recent"]).unshift(token);
-                            localStorage.setItem("recent", (JSON.stringify(recent)));
-                            document.open();
-                            document.write(responseData);
-                            document.close();
-                        }
-                        else if ((responseData.substring(0, 14)) != "<!--SHArdow-->")
-                        {
-                            document.getElementById("tokenInstructions").innerHTML = "⚠ invalid token!"
-                            console.log(responseData)
-                        }
-                        else
-                        {
-                            throw "Impossible Condition";
-                        }
-
-                    }
-                    else if (responseStatus != 200)
-                    {
-                        document.getElementById("tokenInstructions").innerHTML = "⚠ invalid token!"
-                    }
-                    else
-                    {
-                        throw "Impossible Condition";
-                    }
-
-
-
-                }
-                else
-                {
-                    throw "Impossible Condition";
-                }
-
-            }
-
-        )
-
-    );
 
 }
 
 forwarder();
-
 
 
