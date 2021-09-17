@@ -11,7 +11,7 @@
             "purpose": "maskable"
         }
     ],
-    "start_url": "/",
+    "start_url": "/public/",
     "display": "minimal-ui",
     "orientation": "landscape",
     "background_color": "#242424",
