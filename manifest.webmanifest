@@ -1,0 +1,32 @@
+{
+
+    "short_name": "pisces_",
+    "name": "pisces_ alpha -1.0.0.0",
+    "icons":
+    [
+        {
+            "src": "snail.png",
+            "type": "image/png",
+            "sizes": "48x48",
+            "purpose": "maskable"
+        },
+        {
+            "src": "largesnail.png",
+            "type": "image/png",
+            "sizes": "256x256",
+            "purpose": "maskable"
+        },
+        {
+            "src": "superlargesnail.png",
+            "type": "image/png",
+            "sizes": "1024x1024",
+            "purpose": "any"
+        }
+    ],
+    "start_url": "/mynsb.html",
+    "display": "minimal-ui",
+    "orientation": "landscape",
+    "background_color": "#242424",
+    "theme_color": "#242424",
+    "scope": "/"
+}
