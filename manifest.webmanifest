@@ -23,7 +23,7 @@
             "purpose": "any"
         }
     ],
-    "start_url": "/mynsb.html",
+    "start_url": "/public/",
     "display": "minimal-ui",
     "orientation": "landscape",
     "background_color": "#242424",
