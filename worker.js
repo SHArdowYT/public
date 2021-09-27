@@ -95,16 +95,39 @@ self.addEventListener
             (
                 function (cache)
                 {
+
                     return fetch(event.request)
                     .then
                     (
                         function (response)
                         {
-                            cache.put((event.request), (response.clone()));
-                            return response;
+
+                            if ((response.status) == 200)
+                            {
+
+                                cache.put((event.request), (response.clone()));
+                                return response;
+
+                            }
+                            else if ((response.status) != 200)
+                            {
+
+                                return response;
+
+                            }
 
                         }
                     )
+                    .catch
+                    (
+                        function (error)
+                        {
+
+                            return cache.match(event.request);
+
+                        }
+                    )
+
                 }
             )
 
